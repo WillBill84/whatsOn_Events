@@ -1,0 +1,120 @@
+.App {
+  text-align: center;
+}
+a {
+  color: #404040;
+  text-decoration: none;
+  display: flex;
+}
+a:hover {
+  color: #000;
+}
+.button {
+  max-width: 100px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 0 0 0;
+  background: #00d1b2;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  display: block;
+}
+.button:hover {
+  background: #00c9ab;
+  color: #fff;
+}
+p {
+  margin: 5px 0;
+}
+h3 {
+  margin: 0;
+}
+header {
+    height: 20vh;
+    background: #00d1b2;
+    position: relative;
+    float: left;
+    width: 100%;
+}
+.panelBody {
+  max-width: 800px;
+  padding: 20px;
+  margin: 0 auto;
+  border-radius: 6px;
+  right: 0;
+  left: 0;
+  top: 10%;
+  position: absolute;
+  
+}
+.PanelHeader {
+  background: #00d1b2;
+  color: #fff;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0px 4px 5px #ccc;
+}
+.PanelHeader h3 {
+  margin: 0;
+}
+.eventCards {
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 20px;
+  border-bottom: 1px solid #e9e9e9;
+  background: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%);
+}
+.SingleCards {
+  margin: 0;
+  border-radius: 0px 0px 20px 20px;
+}
+/* .eventCards:nth-of-type(odd) {
+  background: #f9f9f9;
+} */
+.eventImg {
+  width: 150px;
+  display: flex;
+  margin: 0px 20px 0px 0px ;
+  border-radius: 10px;
+}
+.singleEventImg {
+  width: 100%;
+  display: flex;
+  align-self: flex-start;
+  margin: 0px 0px 20px 0px ;
+  border-radius: 10px;
+  
+}
+
+.eventDetails {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 0px 0px 0px ;
+}
+.eventDetails p {
+  margin: 5px 0px 0px 0px ;
+}
+.eventDetails h4 {
+  margin: 0;
+}
+.GoogleMap {
+  width: 100%;
+  margin: 20px 0 0 0;
+
+}
+
+
+@media (max-width: 576px) {
+
+  .eventImg {
+    width: 100%;
+    margin: 0px 0px 10px 0px;
+  }
+
+
+}
