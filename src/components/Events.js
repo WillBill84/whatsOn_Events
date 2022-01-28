@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
+import moment from 'moment';
 
-const BASE_URL = 'https://app.ticketmaster.com/discovery/v2/events.json?countryCode=AU&sort=date,asc&apikey=EMZOAA3KlATktn9bwYV8aKh7yFnEm92G';
-  console.log(BASE_URL);
+const newDate = moment().format("YYYY-MM-DDTHH:mm:ss") + "Z";
 
- class Events extends React.Component {
+const BASE_URL = `https://app.ticketmaster.com/discovery/v2/events.json?countryCode=AU&sort=date,asc&startDateTime=${newDate}&apikey=${process.env.REACT_APP_TICKETMASTER_API_KEY}`;
+console.log(BASE_URL);
+
+ class Events extends React.Component {    
 
     state = {
         data: []
+        
     }
-
 
     componentDidMount() {
         
@@ -22,8 +25,10 @@ const BASE_URL = 'https://app.ticketmaster.com/discovery/v2/events.json?countryC
               this.setState({data});
         })
     }
+    
 
     render () {
+        
         
         return (
             <>
@@ -51,8 +56,6 @@ const BASE_URL = 'https://app.ticketmaster.com/discovery/v2/events.json?countryC
         )
     }
    
-   
-
 
 };
 

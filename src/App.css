@@ -25,6 +25,33 @@ a:hover {
   background: #00c9ab;
   color: #fff;
 }
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-container .react-datepicker-wrapper {
+  margin: 12px 0;
+  width: 100%;
+}
+
+.input-container .react-datepicker-wrapper input {
+  padding: 4px 12px;
+  border: none;
+}
+.input-container .react-datepicker__day--selected {
+  background-color: #00d1b2;
+}
+.input-container .react-datepicker__day--selected:hover {
+  background-color: #00c9ab;
+}
+.input-container .react-datepicker__day--keyboard-selected {
+  background-color: #00d1b2;
+}
+
 p {
   margin: 5px 0;
 }

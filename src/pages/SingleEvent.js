@@ -4,7 +4,6 @@ import { GoogleMap, Marker, LoadScript } from '@react-google-maps/api';
 
 class SingleEvent extends React.Component {
     
-
     constructor(props) {
         super(props);
         this.state = {
@@ -16,12 +15,10 @@ class SingleEvent extends React.Component {
     
     componentDidMount() {
 
-    
         const id = window.location.pathname;
-        console.log(id);
 
         this.setState({ isLoading: true })
-        fetch(`https://app.ticketmaster.com/discovery/v2/events${id}.json?apikey=EMZOAA3KlATktn9bwYV8aKh7yFnEm92G`)
+        fetch(`https://app.ticketmaster.com/discovery/v2/events${id}.json?apikey=${process.env.REACT_APP_TICKETMASTER_API_KEY}`)
             .then(response => response.json())
             .then(response => {
                 this.setState({
