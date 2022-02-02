@@ -4,6 +4,8 @@ import Events from '../components/Events';
 import "react-datepicker/dist/react-datepicker.css";
 import moment from 'moment';
 
+
+
 function Home() {
 
     const [ startDate, setStartDate ] = useState(new Date());
@@ -12,7 +14,6 @@ function Home() {
 
         setStartDate(startDate);
        
-        
       };
 
       let formatedDate = startDate.toJSON();
@@ -31,6 +32,7 @@ function Home() {
             />
             </div>
         </header>
+        
         <Events/>
 
         </>

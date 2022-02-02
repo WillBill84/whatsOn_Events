@@ -29,6 +29,9 @@ class SingleEvent extends React.Component {
                 console.log(this.state.data);
     
             })
+            .catch((error) => {
+                console.error(error);
+              });
             
     }
 

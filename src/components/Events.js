@@ -3,6 +3,8 @@ import moment from 'moment';
 
 const newDate = moment().format("YYYY-MM-DDTHH:mm:ss") + "Z";
 
+
+
 const BASE_URL = `https://app.ticketmaster.com/discovery/v2/events.json?countryCode=AU&sort=date,asc&startDateTime=${newDate}&apikey=${process.env.REACT_APP_TICKETMASTER_API_KEY}`;
 console.log(BASE_URL);
 
@@ -24,6 +26,9 @@ console.log(BASE_URL);
             console.log(data);
               this.setState({data});
         })
+        .catch((error) => {
+            console.error(error);
+          });
     }
     
 
